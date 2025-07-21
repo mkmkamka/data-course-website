@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lesson Title</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .slide { max-width: 800px; margin: auto; }
+    h1 { text-align: center; }
+    .content { margin-top: 20px; }
+    .quiz { margin-top: 40px; }
+    button { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>Lesson 1: Introduction to Data Analysis</h1>
+    <div class="content">
+      <p>Here goes your lesson text and images.</p>
+    </div>
+
+    <div class="quiz">
+      <h2>Quiz</h2>
+      <form id="quizForm">
+        <p>1. What is data analysis?</p>
+        <label><input type="radio" name="q1" value="correct"> The process of inspecting and modeling data</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Guessing from data</label><br>
+        <label><input type="radio" name="q1" value="wrong"> Ignoring data</label><br>
+
+        <button type="button" onclick="checkQuiz()">Submit</button>
+      </form>
+      <p id="result"></p>
+    </div>
+  </div>
+
+  <script>
+    function checkQuiz() {
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      const result = document.getElementById("result");
+
+      if (!q1) {
+        result.textContent = "Please answer the question.";
+        return;
+      }
+
+      if (q1.value === "correct") {
+        result.textContent = "Correct! You completed the lesson.";
+        // Here you can add code to mark lesson complete in Firebase
+      } else {
+        result.textContent = "Incorrect. Try again.";
+      }
+    }
+  </script>
+</body>
+</html>
