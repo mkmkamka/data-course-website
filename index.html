@@ -2,160 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dataway</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    .hero {
-  position: relative;
-  background-image: url('imagine.png');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-overlay {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 60px 30px;
-  border-radius: 12px;
-  max-width: 700px;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.btn {
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.btn.orange {
-  background-color: #ff5500;
-  color: white;
-}
-
-.btn.dark {
-  background-color: #222;
-  color: white;
-}
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #000;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: black;
       color: white;
     }
 
-    .navbar {
-      width: 100%;
-      padding: 20px 40px;
-      background-color: #000;
+    header.navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 40px;
+      background-color: black;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 1.5rem;
-      font-weight: bold;
     }
 
     .logo img {
-      width: 32px;
-      height: 32px;
+      height: 30px;
       margin-right: 10px;
     }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .nav-item {
-      position: relative;
-      cursor: pointer;
-    }
-
-    .nav-item:hover .dropdown {
-      display: block;
-    }
-
-    .dropdown {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #111;
-      padding: 10px;
-      display: none;
-    }
-
-    .dropdown a {
+    nav a {
       color: white;
       text-decoration: none;
-      display: block;
-      padding: 4px 0;
+      margin: 0 15px;
+      font-weight: 500;
     }
 
-    .buttons {
-      display: flex;
-      gap: 12px;
-    }
-
-    .btn {
-      padding: 10px 16px;
-      border: none;
+    .auth-buttons a {
+      margin-left: 15px;
+      padding: 8px 16px;
       border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem;
     }
 
-    .btn-signin {
-      background-color: #2563eb; /* Blue */
+    .auth-buttons .signin {
+      background-color: #0070f3;
       color: white;
     }
 
-    .btn-join {
-      background-color: #ff5a00; /* Orange */
+    .auth-buttons .join {
+      background-color: #ff5300;
       color: white;
     }
 
-    /* Mobile responsive */
-    @media (max-width: 768px) {
-      .nav-links, .buttons {
-        display: none;
-      }
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      background-image: url('imagine.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.55);
+      padding: 40px;
+      text-align: center;
+      color: white;
+      border-radius: 16px;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons .btn {
+      padding: 12px 24px;
+      margin: 0 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn.orange {
+      background-color: #ff5300;
+      color: white;
+    }
+
+    .btn.orange:hover {
+      background-color: #e64500;
+    }
+
+    .btn.dark {
+      background-color: #333;
+      color: white;
+    }
+
+    .btn.dark:hover {
+      background-color: #555;
     }
   </style>
 </head>
 <body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="logo" />
+      <span>Caraman</span>
+    </div>
+    <nav>
+      <a href="#">Courses</a>
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Help</a>
+    </nav>
+    <div class="auth-buttons">
+      <a href="#" class="signin">Sign in</a>
+      <a href="#" class="join">Join</a>
+    </div>
+  </header>
+
   <section class="hero">
     <div class="hero-overlay">
       <h1>Learn data analysis, your way</h1>
@@ -168,32 +147,5 @@
       </div>
     </div>
   </section>
-  <header class="navbar">
-    <div class="logo">
-      <img src="logo.png" alt="logo" />
-      Caraman
-    </div>
-    <nav class="nav-links">
-      <div class="nav-item">Courses
-        <div class="dropdown">
-          <a href="#">All Courses</a>
-          <a href="#">My Courses</a>
-        </div>
-      </div>
-      <div class="nav-item">About</div>
-      <div class="nav-item">Blog</div>
-      <div class="nav-item">Help
-        <div class="dropdown">
-          <a href="#">FAQ</a>
-          <a href="#">Support</a>
-        </div>
-      </div>
-    </nav>
-    <div class="buttons">
-      <button class="btn btn-signin">Sign in</button>
-      <button class="btn btn-join">Join</button>
-    </div>
-  </header>
-
 </body>
 </html>
