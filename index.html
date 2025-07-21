@@ -6,6 +6,59 @@
   <title>Dataway</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    .hero {
+  position: relative;
+  background-image: url('imagine.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 60px 30px;
+  border-radius: 12px;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.btn.orange {
+  background-color: #ff5500;
+  color: white;
+}
+
+.btn.dark {
+  background-color: #222;
+  color: white;
+}
     * {
       margin: 0;
       padding: 0;
@@ -103,6 +156,18 @@
   </style>
 </head>
 <body>
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Learn data analysis, your way</h1>
+      <p>
+        Interactive lessons, real examples, and a friendly chat assistant help you master data analysis at your own pace. Get guidance, ask questions, and build skills step by step.
+      </p>
+      <div class="hero-buttons">
+        <a href="#" class="btn orange">Start now</a>
+        <a href="#" class="btn dark">How it works</a>
+      </div>
+    </div>
+  </section>
   <header class="navbar">
     <div class="logo">
       <img src="logo.png" alt="logo" />
@@ -129,5 +194,6 @@
       <button class="btn btn-join">Join</button>
     </div>
   </header>
+</section>
 </body>
 </html>
