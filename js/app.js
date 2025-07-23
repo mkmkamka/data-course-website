@@ -4,6 +4,12 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
 import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  console.log("JS loaded and DOM ready");
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyCHWSIJuNJDottoLgucWeqvNmLbzJYNgrk",
   authDomain: "analize-de-date.firebaseapp.com",
@@ -53,4 +59,5 @@ onAuthStateChanged(auth, (user) => {
     course.style.display = "none";
     logout.style.display = "none";
   }
+});
 });
